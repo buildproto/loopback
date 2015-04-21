@@ -1,6 +1,7 @@
 {
   "db": {
+    "database": "loopback_development",
     "name": "db",
-    "connector": "memory"
+    "connector": "postgresql"
   }
 }
