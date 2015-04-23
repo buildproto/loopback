@@ -26,5 +26,9 @@
   "user": {
     "dataSource": "db",
     "public": true
+  },
+  "meetup": {
+    "dataSource": "db",
+    "public": true
   }
 }

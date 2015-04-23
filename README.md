@@ -1,4 +1,12 @@
-### A real world project with Loopback
+### Links
+
+http://docs.strongloop.com/
+http://apidocs.strongloop.com/
+http://apidocs.strongloop.com/loopback-sdk-angular/
+
+
+
+### Steps to get to this repo state
 
 Required
 - npm
@@ -110,7 +118,11 @@ bower install
 lb-ng server/server.js client/lbServices.js
 ```
 
-## User authentication with UI state router
+## Generating angularjs docs 
+
+lb-ng-doc client/lbServices.js
+
+
 
 
 
