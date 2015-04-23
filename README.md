@@ -53,7 +53,7 @@ server/model-config.json
 ```
 
 ```
-createdb projectname_development
+createdb meetup_development
 ```
 
 Add a relationship, with owner only ACL
@@ -106,6 +106,8 @@ login with guest@meetup.com
 slc loopback:acl allow find 
 
 ## Serve static files on the root route
+
+remove root route and add
 
 "files": {
     "loopback#static": {
