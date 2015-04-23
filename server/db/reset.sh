@@ -1,0 +1,2 @@
+dropdb meetup_development
+createdb meetup_development

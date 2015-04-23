@@ -1,6 +1,6 @@
 {
   "db": {
-    "database": "loopback_development",
+    "database": "meetup_development",
     "name": "db",
     "connector": "postgresql"
   }

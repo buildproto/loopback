@@ -56,6 +56,15 @@ server/model-config.json
 createdb projectname_development
 ```
 
+Add a relationship, with owner only ACL
+
+slc loopback:model
+(meetup)
+
+slc loopback:acl (DENY ALL)
+
+slc loopback:acl on meetup for owner
+
 server/db/create.js
 ```
 var path = require('path');
@@ -70,48 +79,39 @@ for (model in models){
 	})	
 }
 ```
+server/db/seed.js
 
-### The client 
-
-touch app.js
-touch index.html
-
-mkdir vendor/
-
-.bowerrc
+explorer login with admin@meetup.com / meetup,
 
 {
-  "directory": "client/vendor"
+  "email": "admin@meetup.com",
+  "password": "meetup"
 }
+set access_token
 
-bower.json
 
-```
+create new meetup
 {
-  "name": "projectname",
-  "version": "0.0.0",
-  "homepage": "https://github.com/buildproto/loopback",
-  "description": "Loopback demo",
-  "main": "app.js",
-  "private": true,
-  "ignore": [
-    "**/.*",
-    "node_modules",
-    "bower_components",
-    "client/vendor",
-    "test",
-    "tests"
-  ],
-  "dependencies": {
-    "angular": "1.3.14",
-    "angular-resource": "*",
-    "angular-ui-router": "*"
-    "bootstrap": "~3.3.1",
-  }
+"name": "Amsterdam Nodejs Meetup"
 }
-```
 
-bower install 
+
+logout
+login with guest@meetup.com 
+{
+  "email": "guest@meetup.com",
+  "password": "meetup"
+}
+
+slc loopback:acl allow find 
+
+## Serve static files on the root route
+
+"files": {
+    "loopback#static": {
+      "params": "$!../client"
+    }
+  },
 
 ## Exposing loopback lb-ng
 ```
